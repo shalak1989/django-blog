@@ -30,3 +30,11 @@
 /*.post h1 a:visited {*/
   /*color: purple;*/
 /*}*/
+
+.post-form-blog textarea {
+  width: 100%;
+}
+
+.post-form-blog button {
+  float: right;
+}
