@@ -7,13 +7,15 @@
     <title>Django Blog</title>
     <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}"/>
     <link rel="stylesheet" href="{% static 'css/blog.css' %}"/>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+          integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 </head>
 <body>
 
 <div class="page-header">
     {% if user.is_authenticated %}
-    <a href="{% url 'post_new' %}" class="top-menu"><i class="fas fa-plus fa-2x"></i></a>
+        <a href="{% url 'post_drafts' %}" class="top-menu"><i class="fab fa-firstdraft fa-2x"></i></a>
+        <a href="{% url 'post_new' %}" class="top-menu"><i class="fas fa-plus fa-2x"></i></a>
     {% endif %}
     <h1><a href="{% url 'post_list' %}">Django Blog</a></h1>
 </div>
