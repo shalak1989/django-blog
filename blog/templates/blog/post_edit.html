@@ -1,8 +1,10 @@
 {% extends 'blog/base.html' %}
 
+{% block title %}{{ form.title.value }}{% endblock %}
+
 {% block content %}
     {% if form.title.value %}
-        <h1>Edit Post</h1>
+        <h1>Editing: {{ form.title.value }}</h1>
     {% else %}
         <h1>New Post</h1>
     {% endif %}
